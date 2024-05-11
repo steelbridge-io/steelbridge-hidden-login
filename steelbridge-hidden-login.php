@@ -64,7 +64,7 @@ function unset_on_logout() {
 add_action('wp_logout', 'unset_on_logout');
 
 function redirect_after_logout(){
-	/* Line 67 */ wp_redirect( home_url('/hidden-login') );
+	wp_redirect( home_url('/') );
 	exit();
 }
 add_action('wp_logout','redirect_after_logout');

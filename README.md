@@ -21,7 +21,7 @@
 </form>
 ```
 
-3. Save the page and now add the slug to the line 25 of steelbridge-hidden-login.php in this plugin where to see /hidden-login/ replace with /your-slug/. Do the same on line 68.
+3. Save the page and now add the slug to the line 25 of steelbridge-hidden-login.php in this plugin where to see /hidden-login/ replace with /your-slug/.
 
 ```
 // Find the follwoing in the code found in steelbridge-hidden-login.php
@@ -32,10 +32,6 @@ setcookie( 'custom_login_page', 1, time() + 300, COOKIEPATH, COOKIE_DOMAIN );
 }
 }
 
-function redirect_after_logout(){
-/* Line 67 */ wp_redirect( home_url('/your-slug') );
-	exit();
-}
 ```
 4. Make sure to noindex your new login page. You don't want this page showing up in search or becoming part of your site map.
 
